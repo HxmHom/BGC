@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>BCG Urban Farming Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <aside class="sidebar">
+    <header style="background:#1f1f1f;padding:10px;text-align:right;">
+      <button id="userBtn" class="auth-btn">
+        🔑 สมัคร/เข้าสู่ระบบ
+      </button>
+    </header>
+    <h2>🎯 MENU</h2>
+    <ul id="categoryList"></ul>
+  </aside>
+
+  <main>
+    <h1>BCG Urban Farming Platform</h1>
+    <h3>แพลตฟอร์มรวบรวมเครื่องมือสำหรับการเกษตรในชุมชน</h3>
+    <hr>
+
+    <section id="toolSection">
+      <h2 id="categoryTitle">เลือกหมวดหมู่ทางซ้าย</h2>
+      <div id="toolGrid" class="grid"></div>
+    </section>
+
+    <h2>🛠️ เครื่องมือที่เปิดใช้งาน</h2>
+    <div id="activeTools"></div>
+    <div id="toolOutput"></div>
+    
+    <footer>
+      💊 Capsule OS - แพลตฟอร์มเครื่องมือครบวงจร
+    </footer>
+  </main>
+
+  <!-- Modal สมัคร/เข้าสู่ระบบ -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="authTitle">เข้าสู่ระบบ</h2>
+      <input type="text" id="username" placeholder="ชื่อผู้ใช้">
+      <input type="password" id="password" placeholder="รหัสผ่าน">
+      <button id="authAction">เข้าสู่ระบบ</button>
+      <p id="toggleAuth" class="toggle-link">ยังไม่มีบัญชี? สมัครสมาชิก</p>
+    </div>
+  </div>
+
+  <script src="extra_tools.js"></script>
+  <script src="script.js"></script>
+
+  <script type="module">
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+  Chatbot.init({
+      chatflowid: "189974a3-5be4-4068-ac90-11978f2e8fe9",
+      apiHost: "https://cloud.flowiseai.com",
+  })
+  </script>
+
+</body>
+</html>
